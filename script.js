@@ -13,30 +13,30 @@ smallCups.forEach((cup, idx) => {
 
 function highlighCups(idx){
 
-    
+
 
     try {
-        if((smallCups[idx].classList.contains('full') && 
-        !smallCups[idx].nextElementSibling.classList.contains('full'))){  
+        if((smallCups[idx].children[0].classList.contains('full') && 
+        !smallCups[idx].nextElementSibling.children[0].classList.contains('full'))){  
             idx--
     }
     } catch (error) {
-        smallCups[7].classList.toggle('full')
+        smallCups[7].children[0].classList.toggle('full')
         idx = 6
     }
    
     smallCups.forEach((cup, idx2)=> {
         if(idx2 <= idx) {
-            cup.classList.add('full')
+            cup.children[0].classList.add('full')
         } else {
-            cup.classList.remove('full')
+            cup.children[0].classList.remove('full')
         }
     })
     updateBigCup()
 }
 
 function updateBigCup(){
-    const fullCups = document.querySelectorAll('.cup-small.full').length
+    const fullCups = document.querySelectorAll('.fill.full').length
 
     const totalCups = smallCups.length
 

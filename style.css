@@ -42,6 +42,7 @@ h3 {
 }
 
 .cup.cup-small {
+    position: relative;
     height: 95px;
     width: 50px;
     border-radius: 0 0 15px 15px;
@@ -51,15 +52,17 @@ h3 {
     align-items: center;
     justify-content: center;
     text-align: center;
+
     margin: 5px;
+
     
     transition: 0.3s ease;
 }
 
 .cup.cup-small.full {
-    background-color: var(--fill-color);
+    /* background-color: var(--fill-color);
     color: #fff;
-    transform: scale(1.10);
+    transform: scale(1.10); */
     /* transform: scale(.98); */
 }
 
@@ -105,5 +108,22 @@ h3 {
 
 .text {
     text-align: center;
-    margin: 0 0 5px;
+    margin: 10px 0 5px;
+}
+
+.fill.full {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left; */
+    position: absolute;
+    bottom: 0;
+    padding-top: 15px;
+    background-color: var(--fill-color);
+    height: 95px;
+    transition:  0.3s ease-out;
+}
+.fill {
+   
+    height: 0;
 }
